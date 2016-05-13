@@ -1,9 +1,7 @@
 #!/bin/bash
+graph_directory=graphs
 output_directory=output
 output_extension=png
-graph_directory=graphs
-
-mkdir -p $output_directory
 
 while read line; do
   graph_filename=$(echo $line | cut -d' ' -f3)
