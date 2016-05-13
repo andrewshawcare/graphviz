@@ -1,4 +1,5 @@
 graphviz:
   build: .
   volumes:
-    - ./:/usr/src/app
+    - ./graphs:/usr/src/app/graphs
+    - ./output:/usr/src/app/output

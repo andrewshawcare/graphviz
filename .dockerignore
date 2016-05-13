@@ -1,6 +1,5 @@
 .git
 .dockerignore
 docker-compose.yml
-docker-entrypoint.sh
 Dockerfile
 README.md
