@@ -7,6 +7,7 @@ RUN apt-get update && \
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
+COPY . .
 
 VOLUME ["/usr/src/app"]
 
