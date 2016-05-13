@@ -1,5 +1,4 @@
 graphviz:
   build: .
   volumes:
-    - ./:/tmp
-  command: -Tpng /tmp/graph.gv -o /tmp/graph.png
+    - ./:/usr/src/app

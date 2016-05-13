@@ -1,7 +1,4 @@
 digraph G {
-  graph [fontname = "helvetica"];
-  node [fontname = "helvetica"];
-  edge [fontname = "helvetica"];
   main -> parse -> execute;
   main -> init;
   main -> cleanup;

@@ -2,6 +2,12 @@ FROM phusion/baseimage
 
 RUN apt-get update && \
   apt-get install -y \
-  graphviz
+  graphviz \
+  inotify-tools
 
-ENTRYPOINT ["/sbin/my_init", "--", "dot"]
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+VOLUME ["/usr/src/app"]
+
+ENTRYPOINT ["/sbin/my_init", "--", "./docker-entrypoint.sh"]
