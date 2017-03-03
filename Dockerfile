@@ -7,7 +7,7 @@ RUN apt-get update && \
 
 RUN mkdir -p /usr/src/{app,/graphs,/output}
 WORKDIR /usr/src/app
-COPY . .
+COPY ./graphs ./output ./docker-entrypoint.sh ./
 
 VOLUME ["/usr/src/app/graphs", "/usr/src/app/output"]
 
