@@ -1,14 +1,15 @@
-FROM phusion/baseimage
+FROM alpine:3.5
 
-RUN apt-get update && \
-  apt-get install -y \
+RUN apk add --no-cache \
   graphviz \
-  inotify-tools
+  font-bitstream-type1 \
+  inotify-tools \
+  tini
 
-RUN mkdir -p /usr/src/{app,/graphs,/output}
+RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
-COPY ./graphs ./output ./docker-entrypoint.sh ./
+COPY ./docker-entrypoint.sh ./
 
 VOLUME ["/usr/src/app/graphs", "/usr/src/app/output"]
 
-ENTRYPOINT ["/sbin/my_init", "--", "./docker-entrypoint.sh"]
+ENTRYPOINT ["/sbin/tini", "--", "./docker-entrypoint.sh"]
