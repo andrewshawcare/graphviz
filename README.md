@@ -1,7 +1,8 @@
 # graphviz
 Graphviz is open source graph visualization software.
 
-![Modifying a graph with preview of output](https://media.giphy.com/media/xUOxfgJvV4mG2TguCA/giphy.gif)
+<video><source src="https://media.giphy.com/media/xUOxfgJvV4mG2TguCA/giphy-hd.mp4" /></video>
+![Modifying a graph with preview of output](https://media.giphy.com/media/xUOxfgJvV4mG2TguCA/giphy-hd.mp4)
 
 This project exports graphs as PNG images in the `output` directory when graph files in the `graphs` directory are modified.
 
