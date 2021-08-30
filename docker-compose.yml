@@ -1,5 +1,8 @@
-graphviz:
-  build: .
-  volumes:
-    - ./graphs:/usr/src/app/graphs
-    - ./output:/usr/src/app/output
+version: '3.9'
+services:
+  graphviz:
+    build: .
+    init: true
+    volumes:
+      - ./graphs:/usr/src/app/graphs
+      - ./output:/usr/src/app/output
